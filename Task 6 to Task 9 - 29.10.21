@@ -1,0 +1,79 @@
+I tried my best
+
+Задача 6
+
+int main() {
+
+	int n, a;
+	double z=1;
+	std::cin >> n;
+	std::cin >> a;
+
+	while (a > 0) {
+		z = z * n;
+		a--;
+	}
+	std::cout << "The result is: " <<z;
+	
+
+	return 0;
+  
+  Задача 7
+  
+  int main() {
+
+	int number;
+	bool isPrime = true;
+
+	std::cout << "Number: ";
+	std::cin >> number;
+
+	if (number == 0 || number==1) {
+		isPrime = false;
+	}
+	else {
+		for (int i = 2; i <= number / 2; i++) {
+			if (number % i == 0) {
+				isPrime = false;
+				break;
+			}
+		}
+	}
+	if (isPrime)
+		std::cout << "Yes";
+	else
+		std::cout << "No";
+	
+
+	return 0;
+}
+
+Задача 8
+
+-
+
+Задача 9
+
+
+int main() {
+
+	int length;
+
+	std::cout << "Length:";
+	std::cin >> length;
+
+	for (int h = 1; h <= length; h++)
+	{
+		for (int w = 1; w <= length; w++)
+		{
+			if (h == w)
+				std::cout << "0";
+			else if (w > h)
+				std::cout << "+";
+			else if (w < h)
+				std::cout << "-";
+		}
+		std::cout << std::endl;
+	}
+}
+
